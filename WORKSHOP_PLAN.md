@@ -337,6 +337,16 @@ Check for:
 - Sensitive data in logs
 ```
 
+**Option 4 - Documentation Agent**:
+```markdown
+You are a documentation specialist.
+Create and maintain documentation for:
+- API endpoints with examples
+- Setup and configuration guides
+- Code comments and JSDoc
+- User documentation
+```
+
 **Instructions**:
 1. Create `.github/agents/[your-agent].agent.md`
 2. Write the agent definition
@@ -496,6 +506,7 @@ Plan mode → Review → Refine → Agent mode → Verify
 - `.github/instructions/api.instructions.md` - API patterns
 - `.github/agents/code-reviewer.agent.md` - Security-focused reviewer
 - `.github/agents/tester.agent.md` - Playwright testing agent
+- `.github/agents/documentation.agent.md` - Documentation specialist
 - MCP configuration for Playwright
 - README.md with setup instructions
 
