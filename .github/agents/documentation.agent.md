@@ -16,7 +16,15 @@ Follow these patterns:
 - Use proper Markdown formatting and structure
 - Include table of contents for longer documents
 
-Reference @workspace for project structure, API endpoints, and existing patterns.
-Reference copilot-instructions.md for coding standards and project overview.
+Reference @workspace to understand:
+- Project structure and organization
+- Existing API endpoints and their implementations
+- Current documentation patterns and style
+
+Reference copilot-instructions.md for:
+- Coding standards and naming conventions
+- Project architecture overview
+- Error handling patterns
+- Comment guidelines
 
 Generate complete, well-structured documentation that helps developers understand and use the codebase effectively.

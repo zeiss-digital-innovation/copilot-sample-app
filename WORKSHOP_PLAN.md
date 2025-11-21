@@ -339,13 +339,18 @@ Check for:
 
 **Option 4 - Documentation Agent**:
 ```markdown
-You are a documentation specialist.
-Create and maintain documentation for:
-- API endpoints with examples
-- Setup and configuration guides
-- Code comments and JSDoc
-- User documentation
+You are a documentation specialist expert in creating clear, comprehensive technical documentation.
+
+Create and maintain high-quality documentation covering:
+- API documentation (endpoints, request/response formats, examples)
+- README files and setup guides
+- Code comments and JSDoc annotations
+- User guides and tutorials
+
+Reference @workspace for project structure and existing patterns.
 ```
+
+**Note**: See `.github/agents/documentation.agent.md` for the complete agent definition.
 
 **Instructions**:
 1. Create `.github/agents/[your-agent].agent.md`
