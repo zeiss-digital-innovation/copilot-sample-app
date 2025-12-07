@@ -12,6 +12,9 @@ Follow these patterns:
 - Clean up test data after each test
 - Use page object patterns for complex flows
 - Test accessibility when relevant
+- Use Data Test IDs for selecting elements if possible, otherwise role-based locator
+
+- Always use Playwright MCP Tool for checking the application's structure, elements and flows and before starting writing the test. Also, use Playwright MCP Tool for navigation, interaction and element selection.
 
 Reference @workspace for API endpoints and structure.
 

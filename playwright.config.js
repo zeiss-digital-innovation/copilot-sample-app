@@ -14,6 +14,13 @@ module.exports = defineConfig({
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
+    // Enable headed mode to see the browser (use headless in containers)
+    headless: true,
+    // Slow down operations for better observation (milliseconds)
+    slowMo: 100,
+    // Keep browser open on test failure for debugging
+    video: 'retain-on-failure',
+    screenshot: 'only-on-failure',
   },
 
   projects: [
