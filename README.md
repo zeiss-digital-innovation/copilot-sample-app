@@ -43,6 +43,12 @@ See [`.devcontainer/README.md`](.devcontainer/README.md) for detailed devcontain
    npm install
    ```
 
+## Security note (npm audit)
+
+You may see `npm audit` report high-severity vulnerabilities in transitive packages like `tar`, `glob`, or `minimatch`. In this project they come from `sqlite3`'s native build / install toolchain dependencies (for example `node-gyp` and archive extraction), not from code we call directly at runtime.
+
+`npm audit fix --force` may suggest a **breaking** downgrade to `sqlite3@5.0.2`. We intentionally do **not** apply that here because it does not meaningfully improve the workshop app and can increase churn. If you need a “clean audit” for another context, consider swapping the SQLite driver (for example `better-sqlite3`) and pinning Node to a supported LTS.
+
 ## Running the App
 
 ### Development mode (with auto-restart)
