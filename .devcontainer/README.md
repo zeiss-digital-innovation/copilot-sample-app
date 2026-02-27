@@ -59,6 +59,22 @@ npm test
 
 The app will be available at `http://localhost:3000` (automatically forwarded from the container).
 
+## Playwright HTML Report (DevContainer)
+
+The devcontainer forwards Playwright's HTML report server port, so you can view the report in your **host** browser.
+
+```bash
+# Run tests (generates the HTML report)
+npm test
+
+# Serve the report from inside the container
+npx playwright show-report playwright-report --host 0.0.0.0 --port 9323
+```
+
+Open from your host browser:
+
+- `http://localhost:9323`
+
 ## Troubleshooting
 
 ### Copilot Not Working

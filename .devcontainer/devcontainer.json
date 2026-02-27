@@ -32,12 +32,20 @@
       }
     }
   },
-  "forwardPorts": [3000],
+  "forwardPorts": [3000, 9323],
   "portsAttributes": {
     "3000": {
       "label": "TaskFlow App",
       "onAutoForward": "notify"
+    },
+    "9323": {
+      "label": "Playwright HTML Report",
+      "onAutoForward": "notify"
     }
+  },
+  "containerEnv": {
+    "PLAYWRIGHT_HTML_HOST": "0.0.0.0",
+    "PLAYWRIGHT_HTML_PORT": "9323"
   },
   "postCreateCommand": "npm install && npx playwright install chromium --with-deps",
   "remoteUser": "node"
