@@ -35,6 +35,7 @@ Requires:
 - **GitHub Copilot Chat** extension (authenticated before opening the devcontainer)
 
 See [`.devcontainer/README.md`](.devcontainer/README.md) for detailed devcontainer setup instructions.
+If GitHub Copilot cannot connect from inside the devcontainer, especially behind Zscaler on Docker Desktop for Windows, check the troubleshooting section there for proxy-related workarounds.
 
 ## Installation
 
