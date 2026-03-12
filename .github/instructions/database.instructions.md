@@ -1,5 +1,6 @@
 ---
 applyTo: "src/database/**,**/db.js,**/init.js"
+description: This file contains instructions for working with the SQLite database in the project.
 ---
 
 # Database Instructions
