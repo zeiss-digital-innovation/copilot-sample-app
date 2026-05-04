@@ -45,8 +45,11 @@
   },
   "containerEnv": {
     "PLAYWRIGHT_HTML_HOST": "0.0.0.0",
-    "PLAYWRIGHT_HTML_PORT": "9323"
+    "PLAYWRIGHT_HTML_PORT": "9323",
+    "HTTP_PROXY": "http://proxy:9000",
+    "HTTPS_PROXY": "http://proxy:9000"
   },
+  "runArgs": ["--add-host", "proxy:host-gateway"],
   "postCreateCommand": "npm install && npx playwright install chromium --with-deps",
   "remoteUser": "node"
 }
