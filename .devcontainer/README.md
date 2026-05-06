@@ -87,19 +87,11 @@ If GitHub Copilot isn't working inside the container:
 
 If you're behind Zscaler or another corporate proxy, especially with Docker Desktop on Windows, Copilot inside the devcontainer may fail to reach GitHub's services even when the host machine works normally.
 
-Try these workarounds that workshop participants reported as effective:
+The devcontainer is pre-configured to route traffic through the host's proxy at `localhost:9000` (via the `HTTP_PROXY`/`HTTPS_PROXY` environment variables and `--add-host proxy:host-gateway` run argument). If that proxy address differs in your environment, update the hostname/port in `containerEnv` and rebuild the container.
 
-1. Add proxy environment variables to `.devcontainer/devcontainer.json`:
+If the proxy configuration alone is not sufficient, try also disabling VS Code's built-in proxy handling:
 
-```json
-"remoteEnv": {
-   "HTTP_PROXY": "http://host.docker.internal:9000",
-   "HTTPS_PROXY": "http://host.docker.internal:9000"
-}
-```
-
-2. Rebuild the container after saving the change.
-3. In the container window, open VS Code Settings and set **Application > Proxy: Support** to `off`.
+1. In the container window, open VS Code Settings and set **Application > Proxy: Support** to `off`.
 
 If you prefer editing settings as JSON in the container, add this to the container's VS Code settings:
 
@@ -107,7 +99,7 @@ If you prefer editing settings as JSON in the container, add this to the contain
 "http.proxySupport": "off"
 ```
 
-If one workaround alone is not sufficient, apply both the `remoteEnv` proxy settings and the VS Code proxy setting, then rebuild/reopen the container.
+Rebuild/reopen the container after any changes.
 
 ### WSL Proxy Configuration
 
