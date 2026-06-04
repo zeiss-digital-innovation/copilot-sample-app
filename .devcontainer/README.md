@@ -87,7 +87,7 @@ If GitHub Copilot isn't working inside the container:
 
 If you're behind Zscaler or another corporate proxy, especially with Docker Desktop on Windows, Copilot inside the devcontainer may fail to reach GitHub's services even when the host machine works normally.
 
-The devcontainer is pre-configured to route traffic through the host's proxy at `localhost:9000` (via the `HTTP_PROXY`/`HTTPS_PROXY` environment variables and `--add-host proxy:host-gateway` run argument). If that proxy address differs in your environment, update the hostname/port in `containerEnv` and rebuild the container.
+The devcontainer now inherits proxy settings from your host environment (`HTTP_PROXY`, `HTTPS_PROXY`, and `NO_PROXY`). If your host does not define these variables, the container will use direct internet access. If you do need a proxy, export the correct values on your host before opening/rebuilding the container.
 
 If the proxy configuration alone is not sufficient, try also disabling VS Code's built-in proxy handling:
 

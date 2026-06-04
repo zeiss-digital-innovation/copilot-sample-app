@@ -46,8 +46,9 @@
   "containerEnv": {
     "PLAYWRIGHT_HTML_HOST": "0.0.0.0",
     "PLAYWRIGHT_HTML_PORT": "9323",
-    "HTTP_PROXY": "http://proxy:9000",
-    "HTTPS_PROXY": "http://proxy:9000"
+    "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+    "HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+    "NODE_OPTIONS": "--dns-result-order=ipv4first"
   },
   "runArgs": ["--add-host", "proxy:host-gateway"],
   "postCreateCommand": "npm install && npx playwright install chromium --with-deps",
