@@ -1,6 +1,6 @@
 # TaskFlow DevContainer Setup
 
-This devcontainer provides a pre-configured development environment for the TaskFlow workshop with Node.js 20, Playwright, and all necessary build tools.
+This devcontainer provides a pre-configured development environment for the TaskFlow workshop with Node.js 22, Playwright, and all necessary build tools.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The devcontainer will automatically use your host's GitHub authentication and Co
 
 ## What's Included
 
-- **Node.js 20 LTS** with npm
+- **Node.js 22 LTS** with npm
 - **Python & build tools** for native module compilation (sqlite3)
 - **Playwright** with Chromium browser
 - **Zscaler certificate** configured for npm/git/Node.js
