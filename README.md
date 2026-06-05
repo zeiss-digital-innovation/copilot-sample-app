@@ -24,7 +24,7 @@ You can run this application either **locally** or using the **devcontainer**:
 ### Option 1: Local Development
 
 Requires the following tools installed on your machine:
-- **Node.js** (version 20 or higher recommended)
+- **Node.js** (version 22 or higher recommended)
 - **npm** (comes with Node.js)
 
 ### Option 2: DevContainer (Recommended)
