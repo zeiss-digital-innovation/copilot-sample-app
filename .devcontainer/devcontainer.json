@@ -48,6 +48,7 @@
     "PLAYWRIGHT_HTML_PORT": "9323",
     "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
     "HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+    "NO_PROXY": "${localEnv:NO_PROXY}",
     "NODE_OPTIONS": "--dns-result-order=ipv4first"
   },
   "runArgs": ["--add-host", "proxy:host-gateway"],
