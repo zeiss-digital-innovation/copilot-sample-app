@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm
+FROM mcr.microsoft.com/devcontainers/javascript-node:22-trixie
 
 # Install Python, build tools, and sqlite3 CLI + headers
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
