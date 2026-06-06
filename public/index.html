@@ -27,11 +27,11 @@
         <form id="add-task-form">
           <div class="form-group">
             <label for="task-title">Title</label>
-            <input type="text" id="task-title" name="title" required>
+            <input type="text" id="task-title" name="title" data-test-id="add-task-title" required>
           </div>
           <div class="form-group">
             <label for="task-description">Description</label>
-            <textarea id="task-description" name="description" rows="3"></textarea>
+            <textarea id="task-description" name="description" rows="3" data-test-id="add-task-description"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Add Task</button>
         </form>
